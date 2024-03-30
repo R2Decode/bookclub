@@ -1,2 +1,24 @@
 <title>Bookclub | Welcome</title>
     <h1>Welcome to the Bookclub application!</h1>
+    <!DOCTYPE html>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <!-- Include CSS files -->
+        <link rel="stylesheet" href="../css/site.css">
+    </head>
+    <body>
+        <!-- Include header fragment -->
+        <div th:replace="fragments/header :: header"></div>
+    
+        <!-- Content for the home page goes here -->
+        <h1>Welcome to our Book Club!</h1>
+        <p>This is the home page content.</p>
+    
+        <!-- Include footer fragment -->
+        <div th:replace="fragments/footer :: footer"></div>
+    </body>
+    </html>
+    

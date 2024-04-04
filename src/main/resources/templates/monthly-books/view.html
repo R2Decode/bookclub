@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title" th:text="${book.title}"></h5>
+            <p class="card-text" th:text="${book.description}"></p>
+            <p class="card-text">Number of Pages: <span th:text="${book.numOfPages}"></span></p>
+            <p class="card-text">Authors:</p>
+            <ul class="list-group">
+                <li class="list-group-item" th:each="author : ${book.authors}" th:text="${author}"></li>
+            </ul>
+        </div>
+    </div>
+    <a href="/home">Back to Home</a>
+</div>
+
+</body>
+</html>

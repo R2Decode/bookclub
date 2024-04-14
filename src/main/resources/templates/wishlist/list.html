@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Wishlist</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ISBN</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="item : ${wishlist}">
+                    <td th:text="${item.isbn}"></td>
+                    <td th:text="${item.title}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/wishlist/new" class="btn btn-primary">New Wishlist Item</a>
+    </div>
+</body>
+</html>

@@ -11,7 +11,15 @@
             <li><a href="/books">Books</a></li>
             <li><a href="/wishlist">Wishlist</a></li> <!-- Link for Wishlist -->
             <li><a href="/about">About</a></li>
+            <!-- Logout Button -->
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+            </li>
         </ul>
     </nav>
+    <!-- Hidden Logout Form -->
+    <form id="logout-form" action="/logout" method="post" style="display: none;">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    </form>
 </body>
 </html>
